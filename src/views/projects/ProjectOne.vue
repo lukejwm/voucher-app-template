@@ -34,6 +34,15 @@
                       >Climate Action Reserve</a
                     >
                   </p>
+                  <p><strong>Project Page</strong></p>
+                  <p>
+                    <a
+                      href="https://thereserve2.apx.com/mymodule/reg/prjView.asp?id1=400"
+                      target="_blank"
+                      rel="noopen"
+                      >CAR-400</a
+                    >
+                  </p>
                   <p><strong>Country</strong></p>
                   <p>Utah, United States</p>
                   <p><strong>Type</strong></p>
@@ -69,6 +78,7 @@
             </CCardBody>
           </CCol>
         </CCard>
+        <h4>SDGs Achieved</h4>
         <CRow :xs="{ cols: 1, gutter: 1 }" :md="{ cols: 6 }">
           <CCard class="mb-3">
             <CCardImage orientation="top" :src="SDGGoal3" />
@@ -89,6 +99,12 @@
             <CCardImage orientation="top" :src="SDGGoal13" />
           </CCard>
         </CRow>
+        <CRow>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <CButton color="primary" size="lg">Support this Project</CButton>
+          </div>
+        </CRow>
+        <br />
       </CCol>
     </CRow>
   </div>

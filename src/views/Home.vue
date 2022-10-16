@@ -28,7 +28,11 @@
                     :height="411"
                   />
                   <CCardBody>
-                    <h4>South Jordan Landfill Gas Capture</h4>
+                    <h4>
+                      <a href="#/projects/project-one"
+                        >South Jordan Landfill Gas Capture</a
+                      >
+                    </h4>
                     <CListGroup flush>
                       <CListGroupItem
                         ><a
@@ -67,7 +71,9 @@
                       >
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton color="primary" size="lg">Vote</CButton>
+                      <CButton color="primary" size="lg"
+                        >Offset with this project</CButton
+                      >
                     </div>
                   </CCardBody>
                 </CCard>
@@ -81,7 +87,11 @@
                     :height="411"
                   />
                   <CCardBody>
-                    <h4>Burn Stoves Project in Kenya</h4>
+                    <h4>
+                      <a href="#/projects/project-two"
+                        >Burn Stoves Project in Kenya</a
+                      >
+                    </h4>
                     <CListGroup flush>
                       <CListGroupItem
                         ><a
@@ -119,7 +129,9 @@
                       >
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton color="primary" size="lg">Vote</CButton>
+                      <CButton color="primary" size="lg"
+                        >Offset with this project</CButton
+                      >
                     </div>
                   </CCardBody>
                 </CCard>
@@ -133,7 +145,11 @@
                     :height="411"
                   />
                   <CCardBody>
-                    <h4>Turkey Duzce Aksu Province</h4>
+                    <h4>
+                      <a href="#/projects/project-three"
+                        >Turkey Duzce Aksu Province</a
+                      >
+                    </h4>
                     <CListGroup flush>
                       <CListGroupItem
                         ><a
@@ -171,7 +187,9 @@
                       >
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton color="primary" size="lg">Vote</CButton>
+                      <CButton color="primary" size="lg"
+                        >Offset with this project</CButton
+                      >
                     </div>
                   </CCardBody>
                 </CCard>
@@ -185,7 +203,11 @@
                     :height="411"
                   />
                   <CCardBody>
-                    <h4>Pacajai REDD+ Forest Protection</h4>
+                    <h4>
+                      <a href="#/projects/project-four"
+                        >Pacajai REDD+ Forest Protection
+                      </a>
+                    </h4>
                     <CListGroup flush>
                       <CListGroupItem
                         ><a
@@ -222,7 +244,9 @@
                       >
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton color="primary" size="lg">Vote</CButton>
+                      <CButton color="primary" size="lg"
+                        >Offset with this project</CButton
+                      >
                     </div>
                   </CCardBody>
                 </CCard>
