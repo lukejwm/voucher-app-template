@@ -1,14 +1,15 @@
 <template>
-  <CFooter>
+  <CFooter class="brasenose-font">
     <div>
-      <a href="https://coreui.io" target="_blank">CoreUI</a>
-      <span class="ms-1"
-        >&copy; {{ new Date().getFullYear() }} creativeLabs.</span
+      <a href="https://www.bnc.ox.ac.uk/" target="_blank" rel="noopen"
+        >Brasenose College, Oxford</a
       >
-    </div>
-    <div class="ms-auto">
-      <span class="me-1" target="_blank">Powered by</span>
-      <a href="https://coreui.io/vue">CoreUI for Vue</a>
+      <span class="ms-1"
+        >&copy; {{ new Date().getFullYear() }} Developed by
+        <a href="https://alliedoffsets.com/" target="_blank" rel="nopoen"
+          >AlliedOffsets.</a
+        ></span
+      >
     </div>
   </CFooter>
 </template>

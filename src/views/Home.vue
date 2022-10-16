@@ -1,16 +1,21 @@
 <template>
   <div>
     <CRow>
-      <h2>
-        Dear Student, Thank you for helping with our green efforts. Please pick
-        one of the projects below to offset your emissions!
-      </h2>
-      <br />
-      <CCardImage orientation="top" :src="MainHeaderImg" />
       <CCol :xs="12">
         <CCard class="mb-4">
           <CCardHeader>
-            <h3>Projects</h3>
+            <h1>
+              Dear Student, Thank you for helping with our green efforts. Please
+              pick one of the projects below to offset your emissions!
+            </h1>
+          </CCardHeader>
+          <CCardImage orientation="top" :src="MainHeaderImg" />
+        </CCard>
+      </CCol>
+      <CCol :xs="12">
+        <CCard class="mb-4 brasenose-font">
+          <CCardHeader>
+            <h2>Projects</h2>
           </CCardHeader>
           <CCardBody>
             <CRow :xs="{ cols: 1, gutter: 4 }" :md="{ cols: 2 }">
@@ -51,13 +56,15 @@
                       >
                     </CListGroup>
                     <br />
-                    <CCardTitle>Description</CCardTitle>
+                    <CCardTitle><strong>Description</strong></CCardTitle>
                     <CCardText>
                       The South Jordan Landfill project is located at the
                       Trans-Jordan Landfill, a 200-acre sanitary MSW landfill
                       near Salt Lake City that has been in operation for 50
-                      years.
-                      <CCardLink href="#">Read more</CCardLink>
+                      years.<br /><br />
+                      <CCardLink href="#/projects/project-one"
+                        >Read more</CCardLink
+                      >
                     </CCardText>
                     <div class="d-grid gap-2">
                       <CButton color="primary" size="lg">Vote</CButton>
@@ -101,13 +108,15 @@
                       >
                     </CListGroup>
                     <br />
-                    <CCardTitle>Description</CCardTitle>
+                    <CCardTitle><strong>Description</strong></CCardTitle>
                     <CCardText>
                       Project involved manufacture and distribution of JikoKoa
                       improved cookstoves. The stove has higher efficiencies
                       compared with baseline stoves commonly used in the
-                      country.
-                      <CCardLink href="#">Read more</CCardLink>
+                      country.<br />
+                      <CCardLink href="#/projects/project-two"
+                        >Read more</CCardLink
+                      >
                     </CCardText>
                     <div class="d-grid gap-2">
                       <CButton color="primary" size="lg">Vote</CButton>
@@ -151,13 +160,15 @@
                       >
                     </CListGroup>
                     <br />
-                    <CCardTitle>Description</CCardTitle>
+                    <CCardTitle><strong>Description</strong></CCardTitle>
                     <CCardText>
                       The project activity consists of the construction and
                       operation of a 46.2 MW capacity run-of-the-river
                       hydropower plant on the Aksu River in Duzce Province,
-                      Turkey.
-                      <CCardLink href="#">Read more</CCardLink>
+                      Turkey.<br />
+                      <CCardLink href="#/projects/project-three"
+                        >Read more</CCardLink
+                      >
                     </CCardText>
                     <div class="d-grid gap-2">
                       <CButton color="primary" size="lg">Vote</CButton>
@@ -201,12 +212,12 @@
                       >
                     </CListGroup>
                     <br />
-                    <CCardTitle>Description</CCardTitle>
+                    <CCardTitle><strong>Description</strong></CCardTitle>
                     <CCardText>
                       This project’s main objective is to prevent unplanned
                       deforestation in native forests, thus avoiding 10,564,630
-                      tCO2e in net emissions over its 41-year duration.
-                      <CCardLink href="/projects/project-four"
+                      tCO2e in net emissions over its 41-year duration.<br />
+                      <CCardLink href="#/projects/project-four"
                         >Read more</CCardLink
                       >
                     </CCardText>

@@ -1,52 +1,47 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-
-import DefaultLayout from '@/layouts/DefaultLayout'
-//import Home from '@/components/Home.vue'
-
 import { h, resolveComponent } from 'vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Home from '@/views/Home.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: DefaultLayout,
-    redirect: '/home',
+    component: Home,
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('@/views/About.vue'),
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: {
+      render() {
+        return h(resolveComponent('router-view'))
+      },
+    },
+    redirect: '/',
     children: [
       {
-        path: '/home',
-        name: 'Main',
-        component: () => import('@/views/Main.vue'),
+        path: '/projects/project-one',
+        name: 'South Jordan Landfill Gas Capture',
+        component: () => import('@/views/projects/ProjectOne.vue'),
       },
       {
-        path: '/projects',
-        name: 'Projects',
-        component: {
-          render() {
-            return h(resolveComponent('router-view'))
-          },
-        },
-        children: [
-          {
-            path: '/projects/project-one',
-            name: 'Project One',
-            component: () => import('@/views/projects/ProjectOne.vue'),
-          },
-          {
-            path: '/projects/project-two',
-            name: 'Project Two',
-            component: () => import('@/views/projects/ProjectTwo.vue'),
-          },
-          {
-            path: '/projects/project-three',
-            name: 'Project Three',
-            component: () => import('@/views/projects/ProjectThree.vue'),
-          },
-          {
-            path: '/projects/project-four',
-            name: 'Project Four',
-            component: () => import('@/views/projects/ProjectFour.vue'),
-          },
-        ],
+        path: '/projects/project-two',
+        name: 'Burn Stoves Project in Kenya',
+        component: () => import('@/views/projects/ProjectTwo.vue'),
+      },
+      {
+        path: '/projects/project-three',
+        name: 'Turkey Duzce Aksu Province',
+        component: () => import('@/views/projects/ProjectThree.vue'),
+      },
+      {
+        path: '/projects/project-four',
+        name: 'Pacajai REDD+ Forest Protection',
+        component: () => import('@/views/projects/ProjectFour.vue'),
       },
     ],
   },
@@ -55,10 +50,6 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior() {
-    // always scroll to top
-    return { top: 0 }
-  },
 })
 
 export default router
