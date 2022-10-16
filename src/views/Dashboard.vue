@@ -30,11 +30,9 @@
                       This is a wider card with supporting text below as a
                       natural lead-in to additional content. This content is a
                       little bit longer.
+                      <CCardLink href="#">Read more</CCardLink>
                     </CCardText>
-                    <div class="d-grid gap-2 d-md-flex">
-                      <CButton color="secondary" size="lg"
-                        >View Project Details</CButton
-                      >
+                    <div class="d-grid gap-2">
                       <CButton color="primary" size="lg">Vote</CButton>
                     </div>
                   </CCardBody>
@@ -57,11 +55,9 @@
                       This is a wider card with supporting text below as a
                       natural lead-in to additional content. This content is a
                       little bit longer.
+                      <CCardLink href="#">Read more</CCardLink>
                     </CCardText>
-                    <div class="d-grid gap-2 d-md-flex">
-                      <CButton color="secondary" size="lg"
-                        >View Project Details</CButton
-                      >
+                    <div class="d-grid gap-2">
                       <CButton color="primary" size="lg">Vote</CButton>
                     </div>
                   </CCardBody>
@@ -84,11 +80,9 @@
                       This is a wider card with supporting text below as a
                       natural lead-in to additional content. This content is a
                       little bit longer.
+                      <CCardLink href="#">Read more</CCardLink>
                     </CCardText>
-                    <div class="d-grid gap-2 d-md-flex">
-                      <CButton color="secondary" size="lg"
-                        >View Project Details</CButton
-                      >
+                    <div class="d-grid gap-2">
                       <CButton color="primary" size="lg">Vote</CButton>
                     </div>
                   </CCardBody>
@@ -111,11 +105,11 @@
                       This is a wider card with supporting text below as a
                       natural lead-in to additional content. This content is a
                       little bit longer.
-                    </CCardText>
-                    <div class="d-grid gap-2 d-md-flex">
-                      <CButton color="secondary" size="lg"
-                        >View Project Details</CButton
+                      <CCardLink href="/projects/project-four"
+                        >Read more</CCardLink
                       >
+                    </CCardText>
+                    <div class="d-grid gap-2">
                       <CButton color="primary" size="lg">Vote</CButton>
                     </div>
                   </CCardBody>
