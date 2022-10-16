@@ -1,11 +1,12 @@
 <template>
   <div>
     <CRow>
-      <CCol :xs="12">
-        <CCard class="mb-4">
-          <CCardHeader><h2>Welcome Message</h2></CCardHeader>
-        </CCard>
-      </CCol>
+      <h2>
+        Dear Student, Thank you for helping with our green efforts. Please pick
+        one of the projects below to offset your emissions!
+      </h2>
+      <br />
+      <CCardImage orientation="top" :src="MainHeaderImg" />
       <CCol :xs="12">
         <CCard class="mb-4">
           <CCardHeader>
@@ -13,23 +14,49 @@
           </CCardHeader>
           <CCardBody>
             <CRow :xs="{ cols: 1, gutter: 4 }" :md="{ cols: 2 }">
+              <!-- Project One card start -->
               <CCol xs>
                 <CCard>
-                  <CCardImage orientation="top" :src="VueImg" />
+                  <CCardImage
+                    orientation="top"
+                    :src="ProjectOneImg"
+                    :height="411"
+                  />
                   <CCardBody>
-                    <h4>Project One</h4>
+                    <h4>South Jordan Landfill Gas Capture</h4>
                     <CListGroup flush>
-                      <CListGroupItem>Provider</CListGroupItem>
-                      <CListGroupItem>Page Link</CListGroupItem>
-                      <CListGroupItem>Location</CListGroupItem>
-                      <CListGroupItem>Vinatge</CListGroupItem>
+                      <CListGroupItem
+                        ><a
+                          href="https://www.climateactionreserve.org/"
+                          target="_blank"
+                          rel="nopoen"
+                          >Climate Action Reserve</a
+                        ></CListGroupItem
+                      >
+                      <CListGroupItem
+                        ><a
+                          href="https://thereserve2.apx.com/mymodule/reg/prjView.asp?id1=400"
+                          target="blank"
+                          rel="nopen"
+                          >Project Page</a
+                        ></CListGroupItem
+                      >
+                      <CListGroupItem>Utah, United States</CListGroupItem>
+                      <CListGroupItem
+                        ><em
+                          >This project started in 2005 and was last renewed in
+                          2015. The project is renewed every 10 years. The
+                          current vintage available is 2018</em
+                        ></CListGroupItem
+                      >
                     </CListGroup>
                     <br />
                     <CCardTitle>Description</CCardTitle>
                     <CCardText>
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      The South Jordan Landfill project is located at the
+                      Trans-Jordan Landfill, a 200-acre sanitary MSW landfill
+                      near Salt Lake City that has been in operation for 50
+                      years.
                       <CCardLink href="#">Read more</CCardLink>
                     </CCardText>
                     <div class="d-grid gap-2">
@@ -38,23 +65,48 @@
                   </CCardBody>
                 </CCard>
               </CCol>
+              <!-- Project Two card start -->
               <CCol xs>
                 <CCard>
-                  <CCardImage orientation="top" :src="VueImg" />
+                  <CCardImage
+                    orientation="top"
+                    :src="ProjectTwoImg"
+                    :height="411"
+                  />
                   <CCardBody>
-                    <h4>Project Two</h4>
+                    <h4>Burn Stoves Project in Kenya</h4>
                     <CListGroup flush>
-                      <CListGroupItem>Provider</CListGroupItem>
-                      <CListGroupItem>Page Link</CListGroupItem>
-                      <CListGroupItem>Location</CListGroupItem>
-                      <CListGroupItem>Vinatge</CListGroupItem>
+                      <CListGroupItem
+                        ><a
+                          href="https://www.goldstandard.org/"
+                          target="_blank"
+                          rel="nopoen"
+                          >Gold Standard</a
+                        ></CListGroupItem
+                      >
+                      <CListGroupItem
+                        ><a
+                          href="https://registry.goldstandard.org/projects/details/1559"
+                          target="blank"
+                          rel="nopen"
+                          >Project Page</a
+                        ></CListGroupItem
+                      >
+                      <CListGroupItem>Kenya</CListGroupItem>
+                      <CListGroupItem
+                        ><em
+                          >This project started in 2017 and is expected to end
+                          in 2024. The vintage available is 2018.</em
+                        ></CListGroupItem
+                      >
                     </CListGroup>
                     <br />
                     <CCardTitle>Description</CCardTitle>
                     <CCardText>
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Project involved manufacture and distribution of JikoKoa
+                      improved cookstoves. The stove has higher efficiencies
+                      compared with baseline stoves commonly used in the
+                      country.
                       <CCardLink href="#">Read more</CCardLink>
                     </CCardText>
                     <div class="d-grid gap-2">
@@ -63,23 +115,48 @@
                   </CCardBody>
                 </CCard>
               </CCol>
+              <!-- Project Three card start -->
               <CCol xs>
                 <CCard>
-                  <CCardImage orientation="top" :src="VueImg" />
+                  <CCardImage
+                    orientation="top"
+                    :src="ProjectThreeImg"
+                    :height="411"
+                  />
                   <CCardBody>
-                    <h4>Project Three</h4>
+                    <h4>Turkey Duzce Aksu Province</h4>
                     <CListGroup flush>
-                      <CListGroupItem>Provider</CListGroupItem>
-                      <CListGroupItem>Page Link</CListGroupItem>
-                      <CListGroupItem>Location</CListGroupItem>
-                      <CListGroupItem>Vinatge</CListGroupItem>
+                      <CListGroupItem
+                        ><a
+                          href="https://verra.org/"
+                          target="_blank"
+                          rel="nopoen"
+                          >Verra</a
+                        ></CListGroupItem
+                      >
+                      <CListGroupItem
+                        ><a
+                          href="https://registry.verra.org/app/projectDetail/VCS/2095"
+                          target="blank"
+                          rel="nopen"
+                          >Project Page</a
+                        ></CListGroupItem
+                      >
+                      <CListGroupItem>Duzce, Turkey</CListGroupItem>
+                      <CListGroupItem
+                        ><em
+                          >This project started in 2014 and is expected to end
+                          in 2024. The vintage available is 2015.</em
+                        ></CListGroupItem
+                      >
                     </CListGroup>
                     <br />
                     <CCardTitle>Description</CCardTitle>
                     <CCardText>
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      The project activity consists of the construction and
+                      operation of a 46.2 MW capacity run-of-the-river
+                      hydropower plant on the Aksu River in Duzce Province,
+                      Turkey.
                       <CCardLink href="#">Read more</CCardLink>
                     </CCardText>
                     <div class="d-grid gap-2">
@@ -88,23 +165,47 @@
                   </CCardBody>
                 </CCard>
               </CCol>
+              <!-- Project Four card start -->
               <CCol xs>
                 <CCard>
-                  <CCardImage orientation="top" :src="VueImg" />
+                  <CCardImage
+                    orientation="top"
+                    :src="ProjectFourImg"
+                    :height="411"
+                  />
                   <CCardBody>
-                    <h4>Project Four</h4>
+                    <h4>Pacajai REDD+ Forest Protection</h4>
                     <CListGroup flush>
-                      <CListGroupItem>Provider</CListGroupItem>
-                      <CListGroupItem>Page Link</CListGroupItem>
-                      <CListGroupItem>Location</CListGroupItem>
-                      <CListGroupItem>Vinatge</CListGroupItem>
+                      <CListGroupItem
+                        ><a
+                          href="https://verra.org/"
+                          target="_blank"
+                          rel="nopoen"
+                          >Verra</a
+                        ></CListGroupItem
+                      >
+                      <CListGroupItem
+                        ><a
+                          href="https://registry.verra.org/app/projectDetail/VCS/981"
+                          target="blank"
+                          rel="nopen"
+                          >Project Page</a
+                        ></CListGroupItem
+                      >
+                      <CListGroupItem>Para, Brazil</CListGroupItem>
+                      <CListGroupItem
+                        ><em
+                          >This project started in 2009 and is expected to end
+                          in 2048. The vintage available is 2013.</em
+                        ></CListGroupItem
+                      >
                     </CListGroup>
                     <br />
                     <CCardTitle>Description</CCardTitle>
                     <CCardText>
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      This project’s main objective is to prevent unplanned
+                      deforestation in native forests, thus avoiding 10,564,630
+                      tCO2e in net emissions over its 41-year duration.
                       <CCardLink href="/projects/project-four"
                         >Read more</CCardLink
                       >
@@ -290,7 +391,11 @@
 </template>
 
 <script>
-import VueImg from '@/assets/images/vue.jpg'
+import MainHeaderImg from '@/assets/images/bannerProject.jpg'
+import ProjectOneImg from '@/assets/images/projectOne.png'
+import ProjectTwoImg from '@/assets/images/projectTwo.png'
+import ProjectThreeImg from '@/assets/images/projectThree.png'
+import ProjectFourImg from '@/assets/images/projectFour.png'
 
 export default {
   name: 'Dashboard',
@@ -409,7 +514,11 @@ export default {
       progressGroupExample1,
       progressGroupExample2,
       progressGroupExample3,
-      VueImg,
+      MainHeaderImg,
+      ProjectOneImg,
+      ProjectTwoImg,
+      ProjectThreeImg,
+      ProjectFourImg,
     }
   },
 }

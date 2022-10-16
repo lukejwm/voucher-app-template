@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 import DefaultLayout from '@/layouts/DefaultLayout'
+//import Home from '@/components/Home.vue'
+
 import { h, resolveComponent } from 'vue'
 
 const routes = [
@@ -8,12 +10,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: DefaultLayout,
-    redirect: '/dashboard',
+    redirect: '/home',
     children: [
       {
-        path: '/dashboard',
-        name: 'Dashboard',
-        component: () => import('@/views/Dashboard.vue'),
+        path: '/home',
+        name: 'Main',
+        component: () => import('@/views/Main.vue'),
       },
       {
         path: '/projects',
