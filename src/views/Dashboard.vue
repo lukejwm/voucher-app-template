@@ -3,6 +3,11 @@
     <CRow>
       <CCol :xs="12">
         <CCard class="mb-4">
+          <CCardHeader><h2>Welcome Message</h2></CCardHeader>
+        </CCard>
+      </CCol>
+      <CCol :xs="12">
+        <CCard class="mb-4">
           <CCardHeader>
             <h3>Projects</h3>
           </CCardHeader>
@@ -26,6 +31,12 @@
                       natural lead-in to additional content. This content is a
                       little bit longer.
                     </CCardText>
+                    <div class="d-grid gap-2 d-md-flex">
+                      <CButton color="secondary" size="lg"
+                        >View Project Details</CButton
+                      >
+                      <CButton color="primary" size="lg">Vote</CButton>
+                    </div>
                   </CCardBody>
                 </CCard>
               </CCol>
@@ -36,6 +47,7 @@
                     <h4>Project Two</h4>
                     <CListGroup flush>
                       <CListGroupItem>Provider</CListGroupItem>
+                      <CListGroupItem>Page Link</CListGroupItem>
                       <CListGroupItem>Location</CListGroupItem>
                       <CListGroupItem>Vinatge</CListGroupItem>
                     </CListGroup>
@@ -46,6 +58,12 @@
                       natural lead-in to additional content. This content is a
                       little bit longer.
                     </CCardText>
+                    <div class="d-grid gap-2 d-md-flex">
+                      <CButton color="secondary" size="lg"
+                        >View Project Details</CButton
+                      >
+                      <CButton color="primary" size="lg">Vote</CButton>
+                    </div>
                   </CCardBody>
                 </CCard>
               </CCol>
@@ -56,6 +74,7 @@
                     <h4>Project Three</h4>
                     <CListGroup flush>
                       <CListGroupItem>Provider</CListGroupItem>
+                      <CListGroupItem>Page Link</CListGroupItem>
                       <CListGroupItem>Location</CListGroupItem>
                       <CListGroupItem>Vinatge</CListGroupItem>
                     </CListGroup>
@@ -66,6 +85,12 @@
                       natural lead-in to additional content. This content is a
                       little bit longer.
                     </CCardText>
+                    <div class="d-grid gap-2 d-md-flex">
+                      <CButton color="secondary" size="lg"
+                        >View Project Details</CButton
+                      >
+                      <CButton color="primary" size="lg">Vote</CButton>
+                    </div>
                   </CCardBody>
                 </CCard>
               </CCol>
@@ -76,6 +101,7 @@
                     <h4>Project Four</h4>
                     <CListGroup flush>
                       <CListGroupItem>Provider</CListGroupItem>
+                      <CListGroupItem>Page Link</CListGroupItem>
                       <CListGroupItem>Location</CListGroupItem>
                       <CListGroupItem>Vinatge</CListGroupItem>
                     </CListGroup>
@@ -86,6 +112,12 @@
                       natural lead-in to additional content. This content is a
                       little bit longer.
                     </CCardText>
+                    <div class="d-grid gap-2 d-md-flex">
+                      <CButton color="secondary" size="lg"
+                        >View Project Details</CButton
+                      >
+                      <CButton color="primary" size="lg">Vote</CButton>
+                    </div>
                   </CCardBody>
                 </CCard>
               </CCol>
