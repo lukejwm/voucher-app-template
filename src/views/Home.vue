@@ -132,7 +132,10 @@
                       >
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton color="primary" size="lg" @click="myEvent()"
+                      <CButton
+                        color="primary"
+                        size="lg"
+                        @click="projectTwoVote()"
                         >Offset with this project</CButton
                       >
                     </div>
@@ -190,7 +193,10 @@
                       >
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton color="primary" size="lg" @click="myEvent()"
+                      <CButton
+                        color="primary"
+                        size="lg"
+                        @click="projectThreeVote()"
                         >Offset with this project</CButton
                       >
                     </div>
@@ -247,7 +253,10 @@
                       >
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton color="primary" size="lg" @click="myEvent()"
+                      <CButton
+                        color="primary"
+                        size="lg"
+                        @click="projectFourVote()"
                         >Offset with this project</CButton
                       >
                     </div>
@@ -384,6 +393,30 @@ export default {
     },
     projectOneVote(event) {
       alert(`You voted for the South Jordan Landfill Gas Capture project`)
+      usaVote += 1
+      this.votingTableData[0].votes.value = usaVote
+      if (event) {
+        alert(event.target.tagName)
+      }
+    },
+    projectTwoVote(event) {
+      alert(`You voted for the Burn Stoves Project in Kenya project`)
+      usaVote += 1
+      this.votingTableData[0].votes.value = usaVote
+      if (event) {
+        alert(event.target.tagName)
+      }
+    },
+    projectThreeVote(event) {
+      alert(`You voted for the Turkey Duzce Aksu Province project`)
+      usaVote += 1
+      this.votingTableData[0].votes.value = usaVote
+      if (event) {
+        alert(event.target.tagName)
+      }
+    },
+    projectFourVote(event) {
+      alert(`You voted for the Pacajai REDD+ Forest Protection project`)
       usaVote += 1
       this.votingTableData[0].votes.value = usaVote
       if (event) {

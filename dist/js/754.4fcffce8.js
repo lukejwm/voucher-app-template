@@ -1,2 +1,2 @@
 "use strict";(self["webpackChunk_coreui_coreui_free_vue_admin_template"]=self["webpackChunk_coreui_coreui_free_vue_admin_template"]||[]).push([[754],{6754:function(e,u,n){n.r(u),n.d(u,{default:function(){return i}});var r=n(3396);const t=(0,r._)("h1",null,"Credits Page",-1);function _(e,u){const n=(0,r.up)("CCol"),_=(0,r.up)("CRow");return(0,r.wg)(),(0,r.iD)("div",null,[(0,r.Wm)(_,null,{default:(0,r.w5)((()=>[(0,r.Wm)(n,{md:12},{default:(0,r.w5)((()=>[t])),_:1})])),_:1})])}var l=n(89);const a={},c=(0,l.Z)(a,[["render",_]]);var i=c}}]);
-//# sourceMappingURL=754.924e4648.js.map
+//# sourceMappingURL=754.4fcffce8.js.map
