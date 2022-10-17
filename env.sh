@@ -1,0 +1,2 @@
+export GCLOUD_PROJECT=brasenosevoterapp
+export GOOGLE_APPLICATION_CREDENTIALS=./brasenose_credentials.json

@@ -9,6 +9,11 @@ const routes = [
     component: Home,
   },
   {
+    path: '/vouchercode/:URLVoucherId',
+    name: 'HomeWithCode',
+    component: Home,
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import('@/views/About.vue'),
@@ -44,6 +49,21 @@ const routes = [
         component: () => import('@/views/projects/ProjectFour.vue'),
       },
     ],
+  },
+  {
+    path: '/thankyou',
+    name: 'Thank You',
+    component: () => import('@/views/ThankYou.vue'),
+  },
+  {
+    path: '/credits',
+    name: 'Credits',
+    component: () => import('@/views/Credits.vue'),
+  },
+  {
+    path: '/terms',
+    name: 'Terms',
+    component: () => import('@/views/Terms.vue'),
   },
 ]
 
