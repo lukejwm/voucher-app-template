@@ -31,6 +31,7 @@
     "@coreui/vue-chartjs": "2.0.0",
     "core-js": "^3.19.0",
     "font-awesome": "^4.7.0",
+    "googleapis": "^108.0.0",
     "vue": "^3.2.23",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
