@@ -1,2 +1,2 @@
 "use strict";(self["webpackChunk_coreui_coreui_free_vue_admin_template"]=self["webpackChunk_coreui_coreui_free_vue_admin_template"]||[]).push([[679],{9679:function(e,u,n){n.r(u),n.d(u,{default:function(){return c}});var r=n(3396);const t=(0,r._)("h1",null,"Thank You for voting",-1);function o(e,u){const n=(0,r.up)("CCol"),o=(0,r.up)("CRow");return(0,r.wg)(),(0,r.iD)("div",null,[(0,r.Wm)(o,null,{default:(0,r.w5)((()=>[(0,r.Wm)(n,{md:12},{default:(0,r.w5)((()=>[t])),_:1})])),_:1})])}var _=n(89);const l={},a=(0,_.Z)(l,[["render",o]]);var c=a}}]);
-//# sourceMappingURL=679.41e8dd3e.js.map
+//# sourceMappingURL=679.f532b995.js.map

@@ -5,8 +5,8 @@
         <h2>About</h2>
         <br />
         <h3>
-          Brasenose College's commitment to move towards carbon neutrality is
-          also your commitment. We want your voice in our approach.
+          Brasenose College's ambition is to move towards carbon neutrality. We
+          want your voice in our approach.
         </h3>
         <h4>A Step Towards Carbon Neutrality</h4>
         <p>
@@ -16,8 +16,8 @@
         <p>
           Brasenose College is determined to be part of the solution. We are
           stepping up to the challenge by working with students, Fellows and
-          select carbon offset projects from around the world that the College
-          willsupport.
+          staff to select carbon offset projects from around the world that the
+          College will support.
         </p>
         <p>
           Each project removes, reduces or avoids greenhouse gas emissions while
@@ -51,10 +51,10 @@
           That is why we have teamed up with
           <a href="https://alliedoffsets.com" target="_blank" rel="noopen"
             >AlliedOffsets</a
-          >, for the second year running, to offset the carbon emissions from
-          the College’s day to day operations. With their help and input from
-          Brasenose students, Fellows and staff we will support a number of
-          emissions reduction projects around the world.
+          >, to offset the carbon emissions from the College’s day to day
+          operations. With their help and input from Brasenose students, Fellows
+          and staff we will support a number of emissions reduction projects
+          around the world.
         </p>
         <h4>Reaching Net Zero Carbon</h4>
         <p>
@@ -120,7 +120,7 @@
         </ol>
         <h4>Next Steps</h4>
         <p>
-          Brasenose College has committed to continuing to measure, reduce and
+          Brasenose College's ambition is to continue to measure, reduce and
           offset emissions from its own operations.
         </p>
         <h4>Further Reading</h4>

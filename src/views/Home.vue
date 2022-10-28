@@ -5,8 +5,8 @@
         <CCard class="mb-4">
           <CCardHeader>
             <h1>
-              Dear Student, Thank you for helping with our green efforts. Please
-              pick one of the projects below to offset your emissions!
+              Thank you for assisting with our environmental ambitions. Please
+              pick one of the projects below to help offset our emissions.
             </h1>
           </CCardHeader>
           <CCardImage orientation="top" :src="MainHeaderImg" />
@@ -51,13 +51,6 @@
                         ></CListGroupItem
                       >
                       <CListGroupItem>Utah, United States</CListGroupItem>
-                      <CListGroupItem
-                        ><em
-                          >This project started in 2005 and was last renewed in
-                          2015. The project is renewed every 10 years. The
-                          current vintage available is 2018</em
-                        ></CListGroupItem
-                      >
                     </CListGroup>
                     <br />
                     <CCardTitle><strong>Description</strong></CCardTitle>
@@ -113,12 +106,6 @@
                         ></CListGroupItem
                       >
                       <CListGroupItem>Kenya</CListGroupItem>
-                      <CListGroupItem
-                        ><em
-                          >This project started in 2017 and is expected to end
-                          in 2024. The vintage available is 2018.</em
-                        ></CListGroupItem
-                      >
                     </CListGroup>
                     <br />
                     <CCardTitle><strong>Description</strong></CCardTitle>
@@ -174,12 +161,6 @@
                         ></CListGroupItem
                       >
                       <CListGroupItem>Duzce, Turkey</CListGroupItem>
-                      <CListGroupItem
-                        ><em
-                          >This project started in 2014 and is expected to end
-                          in 2024. The vintage available is 2015.</em
-                        ></CListGroupItem
-                      >
                     </CListGroup>
                     <br />
                     <CCardTitle><strong>Description</strong></CCardTitle>
@@ -235,12 +216,6 @@
                         ></CListGroupItem
                       >
                       <CListGroupItem>Para, Brazil</CListGroupItem>
-                      <CListGroupItem
-                        ><em
-                          >This project started in 2009 and is expected to end
-                          in 2048. The vintage available is 2013.</em
-                        ></CListGroupItem
-                      >
                     </CListGroup>
                     <br />
                     <CCardTitle><strong>Description</strong></CCardTitle>
