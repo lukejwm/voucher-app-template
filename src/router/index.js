@@ -65,6 +65,11 @@ const routes = [
     name: 'Terms',
     component: () => import('@/views/Terms.vue'),
   },
+  {
+    path: '/credits',
+    name: 'Site Credits',
+    component: () => import('@/views/Credits.vue'),
+  },
 ]
 
 const router = createRouter({

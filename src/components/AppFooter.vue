@@ -11,6 +11,11 @@
         ></span
       >
     </div>
+    <div class="mx-auto">
+      <a href="/">Home</a> | <a href="#/about">About</a> |
+      <a href="#/terms">Terms</a> |
+      <a href="#/credits">Site Credits</a>
+    </div>
   </CFooter>
 </template>
 
