@@ -60,16 +60,14 @@
                       near Salt Lake City that has been in operation for 50
                       years.<br /><br />
                       <CCardLink href="#/projects/project-one"
-                        >Read more</CCardLink
-                      >
+                        >Read more
+                      </CCardLink>
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton
-                        color="primary"
-                        size="lg"
-                        @click="projectOneVote()"
-                        >Offset with this project</CButton
+                      <AppVoteConfirmation
+                        projectName="South Jordan Landfill Gas Capture"
                       >
+                      </AppVoteConfirmation>
                     </div>
                   </CCardBody>
                 </CCard>
@@ -115,16 +113,13 @@
                       compared with baseline stoves commonly used in the
                       country.<br />
                       <CCardLink href="#/projects/project-two"
-                        >Read more</CCardLink
-                      >
+                        >Read more
+                      </CCardLink>
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton
-                        color="primary"
-                        size="lg"
-                        @click="projectTwoVote()"
-                        >Offset with this project</CButton
-                      >
+                      <AppVoteConfirmation
+                        projectName="Burn Stoves Project"
+                      ></AppVoteConfirmation>
                     </div>
                   </CCardBody>
                 </CCard>
@@ -170,16 +165,13 @@
                       hydropower plant on the Aksu River in Duzce Province,
                       Turkey.<br />
                       <CCardLink href="#/projects/project-three"
-                        >Read more</CCardLink
-                      >
+                        >Read more
+                      </CCardLink>
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton
-                        color="primary"
-                        size="lg"
-                        @click="projectThreeVote()"
-                        >Offset with this project</CButton
-                      >
+                      <AppVoteConfirmation
+                        projectName="Asku Hydropower Plant"
+                      ></AppVoteConfirmation>
                     </div>
                   </CCardBody>
                 </CCard>
@@ -224,16 +216,13 @@
                       deforestation in native forests, thus avoiding 10,564,630
                       tCO2e in net emissions over its 41-year duration.<br />
                       <CCardLink href="#/projects/project-four"
-                        >Read more</CCardLink
-                      >
+                        >Read more
+                      </CCardLink>
                     </CCardText>
                     <div class="d-grid gap-2">
-                      <CButton
-                        color="primary"
-                        size="lg"
-                        @click="projectFourVote()"
-                        >Offset with this project</CButton
-                      >
+                      <AppVoteConfirmation
+                        projectName="Pacajai REDD+ Forest Protection"
+                      ></AppVoteConfirmation>
                     </div>
                   </CCardBody>
                 </CCard>
@@ -242,50 +231,8 @@
           </CCardBody>
         </CCard>
       </CCol>
-      <CCol :md="12" class="brasenose-font">
-        <CCard class="mb-4">
-          <CCardHeader><h2>Participation Summary</h2></CCardHeader>
-          <CCardBody>
-            <CTable align="middle" class="mb-0 border" hover responsive>
-              <CTableHead>
-                <CTableRow>
-                  <CTableHeaderCell>Project</CTableHeaderCell>
-                  <CTableHeaderCell class="text-center"
-                    >Country</CTableHeaderCell
-                  >
-                  <CTableHeaderCell>Votes</CTableHeaderCell>
-                </CTableRow>
-              </CTableHead>
-              <CTableBody>
-                <CTableRow v-for="item in votingTableData" :key="item.name">
-                  <CTableDataCell>
-                    <div>{{ item.project.name }}</div>
-                  </CTableDataCell>
-                  <CTableDataCell class="text-center">
-                    <CIcon
-                      size="xl"
-                      :name="item.country.flag"
-                      :title="item.country.name"
-                    />
-                  </CTableDataCell>
-                  <CTableDataCell>
-                    <div class="clearfix">
-                      <div class="float-start">
-                        <strong>{{ item.votes.value }}</strong>
-                      </div>
-                    </div>
-                    <CProgress
-                      thin
-                      :color="item.votes.color"
-                      :value="item.votes.value"
-                    />
-                  </CTableDataCell>
-                </CTableRow>
-              </CTableBody>
-            </CTable>
-          </CCardBody>
-        </CCard>
-      </CCol>
+      <!-- TODO: Refactor this as a component to simplify code in home view! -->
+      <AppVoteSummaryTable></AppVoteSummaryTable>
     </CRow>
   </div>
 </template>
@@ -297,6 +244,8 @@ import ProjectOneImg from '@/assets/images/projectOne.png'
 import ProjectTwoImg from '@/assets/images/projectTwo.png'
 import ProjectThreeImg from '@/assets/images/projectThree.png'
 import ProjectFourImg from '@/assets/images/projectFour.png'
+import AppVoteConfirmation from '@/components/AppVoteConfirmation'
+import AppVoteSummaryTable from '@/components/AppVoteSummary'
 
 let usaVote = 1
 const kenyaVote = 0
@@ -305,6 +254,7 @@ const brazilVote = 0
 
 export default {
   name: 'Dashboard',
+  components: { AppVoteSummaryTable, AppVoteConfirmation },
   setup() {
     const votingTableData = [
       {
@@ -357,47 +307,6 @@ export default {
       ProjectThreeImg,
       ProjectFourImg,
     }
-  },
-
-  methods: {
-    myEvent(event) {
-      alert(`You voted for this project`)
-      if (event) {
-        alert(event.target.tagName)
-      }
-    },
-    projectOneVote(event) {
-      alert(`You voted for the South Jordan Landfill Gas Capture project`)
-      usaVote += 1
-      this.votingTableData[0].votes.value = usaVote
-      if (event) {
-        alert(event.target.tagName)
-      }
-    },
-    projectTwoVote(event) {
-      alert(`You voted for the Burn Stoves Project in Kenya project`)
-      usaVote += 1
-      this.votingTableData[0].votes.value = usaVote
-      if (event) {
-        alert(event.target.tagName)
-      }
-    },
-    projectThreeVote(event) {
-      alert(`You voted for the Turkey Duzce Aksu Province project`)
-      usaVote += 1
-      this.votingTableData[0].votes.value = usaVote
-      if (event) {
-        alert(event.target.tagName)
-      }
-    },
-    projectFourVote(event) {
-      alert(`You voted for the Pacajai REDD+ Forest Protection project`)
-      usaVote += 1
-      this.votingTableData[0].votes.value = usaVote
-      if (event) {
-        alert(event.target.tagName)
-      }
-    },
   },
 }
 </script>

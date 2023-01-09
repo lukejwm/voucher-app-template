@@ -80,7 +80,9 @@
         </CRow>
         <CRow>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <CButton color="primary" size="lg">Support this Project</CButton>
+            <AppVoteConfirmation
+              projectName="Burn Stoves Project"
+            ></AppVoteConfirmation>
           </div>
         </CRow>
         <br />
@@ -97,9 +99,11 @@ import SDGGoal1 from '@/assets/images/sdg_badges/E-WEB-Goal-01.png'
 import SDGGoal3 from '@/assets/images/sdg_badges/E-WEB-Goal-03.png'
 import SDGGoal8 from '@/assets/images/sdg_badges/E-WEB-Goal-08.png'
 import SDGGoal13 from '@/assets/images/sdg_badges/E-WEB-Goal-13.png'
+import AppVoteConfirmation from '@/components/AppVoteConfirmation'
 
 export default {
   name: 'ProjectTwo',
+  components: { AppVoteConfirmation },
   setup() {
     return {
       ProjectBanner1,
