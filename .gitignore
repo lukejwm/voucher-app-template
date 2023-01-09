@@ -1,6 +1,7 @@
 # Folders to ignore
 node_modules/
 tests/e2e/reports/
+dist
 
 # local env files
 .env.local
