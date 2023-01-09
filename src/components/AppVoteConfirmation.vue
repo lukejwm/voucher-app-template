@@ -78,7 +78,15 @@
     >
       <CModalTitle>Please Enter Your Voucher Code</CModalTitle>
     </CModalHeader>
-    <CModalBody> Enter your voucher code to vote for this project. </CModalBody>
+    <CModalBody>
+      <p>To vote for this project, please enter your voucher code.</p>
+      <CFormInput
+        type="text"
+        placeholder="Input voucher code"
+        aria-label="voucher code input"
+      />
+    </CModalBody>
+>>>>>>> 39bf0f3e62224b1753e6eb8b7a37b47543638d70
     <CModalFooter>
       <CButton color="primary">Vote</CButton>
     </CModalFooter>

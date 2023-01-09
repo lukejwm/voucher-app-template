@@ -113,7 +113,9 @@
         </CRow>
         <CRow>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <CButton color="primary" size="lg">Support this Project</CButton>
+            <AppVoteConfirmation
+              projectName="Pacajai REDD+ Forest Protection"
+            ></AppVoteConfirmation>
           </div>
         </CRow>
         <br />
@@ -131,9 +133,11 @@ import ProjectBanner4 from '@/assets/images/projectFourD.png'
 import SDGGoal8 from '@/assets/images/sdg_badges/E-WEB-Goal-08.png'
 import SDGGoal13 from '@/assets/images/sdg_badges/E-WEB-Goal-13.png'
 import SDGGoal15 from '@/assets/images/sdg_badges/E-WEB-Goal-15.png'
+import AppVoteConfirmation from '@/components/AppVoteConfirmation'
 
 export default {
-  name: 'ProjectThree',
+  name: 'ProjectFour',
+  components: { AppVoteConfirmation },
   setup() {
     return {
       ProjectBanner1,

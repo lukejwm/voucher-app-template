@@ -101,7 +101,9 @@
         </CRow>
         <CRow>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <CButton color="primary" size="lg">Support this Project</CButton>
+            <AppVoteConfirmation
+              projectName="South Jordan Landfill Gas Capture"
+            ></AppVoteConfirmation>
           </div>
         </CRow>
         <br />
@@ -120,9 +122,11 @@ import SDGGoal8 from '@/assets/images/sdg_badges/E-WEB-Goal-08.png'
 import SDGGoal9 from '@/assets/images/sdg_badges/E-WEB-Goal-09.png'
 import SDGGoal12 from '@/assets/images/sdg_badges/E-WEB-Goal-12.png'
 import SDGGoal13 from '@/assets/images/sdg_badges/E-WEB-Goal-13.png'
+import AppVoteConfirmation from '@/components/AppVoteConfirmation'
 
 export default {
   name: 'ProjectOne',
+  components: { AppVoteConfirmation },
   setup() {
     return {
       ProjectBanner1,

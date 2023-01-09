@@ -93,7 +93,9 @@
         </CRow>
         <CRow>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <CButton color="primary" size="lg">Support this Project</CButton>
+            <AppVoteConfirmation
+              projectName="Asku Hydropower Plant"
+            ></AppVoteConfirmation>
           </div>
         </CRow>
         <br />
@@ -110,9 +112,11 @@ import SDGGoal7 from '@/assets/images/sdg_badges/E-WEB-Goal-07.png'
 import SDGGoal8 from '@/assets/images/sdg_badges/E-WEB-Goal-08.png'
 import SDGGoal13 from '@/assets/images/sdg_badges/E-WEB-Goal-13.png'
 import SDGGoal15 from '@/assets/images/sdg_badges/E-WEB-Goal-15.png'
+import AppVoteConfirmation from '@/components/AppVoteConfirmation'
 
 export default {
   name: 'ProjectThree',
+  components: { AppVoteConfirmation },
   setup() {
     return {
       ProjectBanner1,
