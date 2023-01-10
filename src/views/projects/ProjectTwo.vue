@@ -56,8 +56,6 @@
                   <p>2017</p>
                   <p><strong>Project End Year</strong></p>
                   <p>2024</p>
-                  <p><strong>Vinatge Year Available</strong></p>
-                  <p>2018</p>
                 </CRow>
               </CardText>
             </CCardBody>
@@ -81,6 +79,7 @@
         <CRow>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <AppVoteConfirmation
+              :projectId="2"
               projectName="Burn Stoves Project"
             ></AppVoteConfirmation>
           </div>

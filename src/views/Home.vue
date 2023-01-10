@@ -65,6 +65,7 @@
                     </CCardText>
                     <div class="d-grid gap-2">
                       <AppVoteConfirmation
+                        :projectId="1"
                         projectName="South Jordan Landfill Gas Capture"
                       >
                       </AppVoteConfirmation>
@@ -118,6 +119,7 @@
                     </CCardText>
                     <div class="d-grid gap-2">
                       <AppVoteConfirmation
+                        :projectId="2"
                         projectName="Burn Stoves Project"
                       ></AppVoteConfirmation>
                     </div>
@@ -170,6 +172,7 @@
                     </CCardText>
                     <div class="d-grid gap-2">
                       <AppVoteConfirmation
+                        :projectId="3"
                         projectName="Asku Hydropower Plant"
                       ></AppVoteConfirmation>
                     </div>
@@ -221,6 +224,7 @@
                     </CCardText>
                     <div class="d-grid gap-2">
                       <AppVoteConfirmation
+                        :projectId="4"
                         projectName="Pacajai REDD+ Forest Protection"
                       ></AppVoteConfirmation>
                     </div>
@@ -247,60 +251,11 @@ import ProjectFourImg from '@/assets/images/projectFour.png'
 import AppVoteConfirmation from '@/components/AppVoteConfirmation'
 import AppVoteSummaryTable from '@/components/AppVoteSummary'
 
-let usaVote = 1
-const kenyaVote = 0
-const turkeyVote = 0
-const brazilVote = 0
-
 export default {
   name: 'Dashboard',
   components: { AppVoteSummaryTable, AppVoteConfirmation },
   setup() {
-    const votingTableData = [
-      {
-        project: {
-          name: 'South Jordan Landfill Gas Capture',
-        },
-        country: { name: 'USA', flag: 'cif-us' },
-        votes: {
-          value: usaVote,
-          color: 'success',
-        },
-      },
-      {
-        project: {
-          name: 'Burn Stoves Project in Kenya',
-        },
-        country: { name: 'Kenya', flag: 'cif-ke' },
-        votes: {
-          value: kenyaVote,
-          color: 'danger',
-        },
-      },
-      {
-        project: {
-          name: 'Turkey Duzce Aksu Province',
-        },
-        country: { name: 'Turkey', flag: 'cif-tr' },
-        votes: {
-          value: turkeyVote,
-          color: 'warning',
-        },
-      },
-      {
-        project: {
-          name: 'Pacajai REDD+ Forest Protection',
-        },
-        country: { name: 'Brazil', flag: 'cif-br' },
-        votes: {
-          value: brazilVote,
-          color: 'info',
-        },
-      },
-    ]
-
     return {
-      votingTableData,
       MainHeaderImg,
       ProjectOneImg,
       ProjectTwoImg,

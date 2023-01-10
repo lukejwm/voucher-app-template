@@ -66,8 +66,6 @@
                   <p>2009</p>
                   <p><strong>Project End Year</strong></p>
                   <p>2048</p>
-                  <p><strong>Vinatge Year Available</strong></p>
-                  <p>2013</p>
                 </CRow>
               </CardText>
               <h4>About</h4>
@@ -114,6 +112,7 @@
         <CRow>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <AppVoteConfirmation
+              :projectId="4"
               projectName="Pacajai REDD+ Forest Protection"
             ></AppVoteConfirmation>
           </div>

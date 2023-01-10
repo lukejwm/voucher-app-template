@@ -6,11 +6,13 @@ import store from './store'
 import CoreuiVue from '@coreui/vue'
 import CIcon from '@coreui/icons-vue'
 import { iconsSet as icons } from '@/assets/icons'
+import Notifications from 'vue-notifications'
 
 const app = createApp(App)
 app.use(store)
 app.use(router)
 app.use(CoreuiVue)
+app.use(Notifications)
 app.provide('icons', icons)
 app.component('CIcon', CIcon)
 

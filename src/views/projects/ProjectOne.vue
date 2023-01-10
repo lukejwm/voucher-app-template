@@ -53,8 +53,6 @@
                   <p>2015</p>
                   <p><strong>Notes</strong></p>
                   <p>This project is renewed every 10 years</p>
-                  <p><strong>Vinatge Year Available</strong></p>
-                  <p>2018</p>
                 </CRow>
               </CardText>
               <h4>About</h4>
@@ -102,6 +100,7 @@
         <CRow>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <AppVoteConfirmation
+              :projectId="1"
               projectName="South Jordan Landfill Gas Capture"
             ></AppVoteConfirmation>
           </div>

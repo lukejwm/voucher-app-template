@@ -53,8 +53,6 @@
                   <p>2014</p>
                   <p><strong>Project End Year</strong></p>
                   <p>2024</p>
-                  <p><strong>Vinatge Year Available</strong></p>
-                  <p>2015</p>
                 </CRow>
               </CardText>
               <h4>About</h4>
@@ -94,6 +92,7 @@
         <CRow>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <AppVoteConfirmation
+              :projectId="3"
               projectName="Asku Hydropower Plant"
             ></AppVoteConfirmation>
           </div>
@@ -105,7 +104,6 @@
 </template>
 
 <script>
-///home/lukejwm/AlliedOffsets/repos/brasenose/brasenose-coreui-template/src/assets/images/sdg_badges/E-WEB-Goal-03.png
 import ProjectBanner1 from '@/assets/images/projectThree.png'
 import ProjectBanner2 from '@/assets/images/projectThreeA.png'
 import SDGGoal7 from '@/assets/images/sdg_badges/E-WEB-Goal-07.png'

@@ -5,7 +5,7 @@
     size="lg"
     @click="
       () => {
-        confirmProjectVote = true
+        confirmProjectVoteModal = true
       }
     "
     >Offset with this project
@@ -13,10 +13,10 @@
   <!-- Initial confirmation modal notification -->
   <CModal
     alignment="center"
-    :visible="confirmProjectVote"
+    :visible="confirmProjectVoteModal"
     @close="
       () => {
-        confirmProjectVote = false
+        confirmProjectVoteModal = false
       }
     "
   >
@@ -24,7 +24,7 @@
       dismiss
       @close="
         () => {
-          confirmProjectVote = false
+          confirmProjectVoteModal = false
         }
       "
     >
@@ -40,7 +40,7 @@
         color="secondary"
         @click="
           () => {
-            confirmProjectVote = false
+            confirmProjectVoteModal = false
           }
         "
       >
@@ -50,8 +50,8 @@
         color="primary"
         @click="
           () => {
-            confirmProjectVote = false
-            voucherCodeInput = true
+            confirmProjectVoteModal = false
+            voucherCodeInputModal = true
           }
         "
         >Confirm</CButton
@@ -61,10 +61,10 @@
   <!-- Confirmation modal where user input their voucher code -->
   <CModal
     alignment="center"
-    :visible="voucherCodeInput"
+    :visible="voucherCodeInputModal"
     @close="
       () => {
-        voucherCodeInput = false
+        voucherCodeInputModal = false
       }
     "
   >
@@ -72,7 +72,7 @@
       dismiss
       @close="
         () => {
-          voucherCodeInput = false
+          voucherCodeInputModal = false
         }
       "
     >
@@ -80,25 +80,37 @@
     </CModalHeader>
     <CModalBody>
       <p>To vote for this project, please enter your voucher code.</p>
+      <!-- Form to process input of voucher code -->
       <CFormInput
-        type="text"
+        id="voucher"
+        type="number"
+        v-model="voucher"
         placeholder="Input voucher code"
         aria-label="voucher code input"
       />
     </CModalBody>
->>>>>>> 39bf0f3e62224b1753e6eb8b7a37b47543638d70
     <CModalFooter>
-      <CButton color="primary">Vote</CButton>
+      <CButton color="primary" @click="submitForm(voucher, $props.projectId)"
+        >Vote</CButton
+      >
     </CModalFooter>
   </CModal>
 </template>
 
 <script>
 import { ref } from 'vue'
+import useValidate from '@vuelidate/core'
+import { required, minLength } from '@vuelidate/validators'
+import axios from 'axios'
 
 export default {
   name: 'AppVoteConfirmation',
   props: {
+    projectId: {
+      type: Number,
+      default: -1,
+      required: true,
+    },
     projectName: {
       type: String,
       default: undefined,
@@ -106,12 +118,59 @@ export default {
     },
   },
   setup() {
-    const confirmProjectVote = ref(false)
-    const voucherCodeInput = ref(false)
+    const confirmProjectVoteModal = ref(false)
+    const voucherCodeInputModal = ref(false)
 
     return {
-      confirmProjectVote,
-      voucherCodeInput,
+      confirmProjectVoteModal,
+      voucherCodeInputModal,
+    }
+  },
+  data() {
+    return {
+      v$: useValidate(),
+      voucher: null,
+    }
+  },
+  methods: {
+    submitForm() {
+      let voucher = this.voucher
+      let projectId = this.projectId
+
+      this.v$.$validate()
+      // TODO: replace these alerts with actual notifications
+      if (!this.v$.$error) {
+        axios
+          .post(
+            'http://localhost:8000/voucher/vote/',
+            {
+              voucher,
+              projectId,
+            },
+            {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT',
+              },
+            },
+          )
+          .then((response) => console.log(response))
+
+        // Provide user notification
+        alert('Your vote has been recorded. Thank you for voting!')
+      } else {
+        alert(
+          'Submission failed. Please ensure you have entered your voucher code!',
+        )
+      }
+      console.log(this.v$)
+      console.log(this.voucher)
+    },
+  },
+  validations() {
+    return {
+      voucher: { required, minLength: minLength(8) },
     }
   },
 }

@@ -45,8 +45,24 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'AppVoteSummaryTable',
+  data() {
+    return {
+      isLoading: false,
+    }
+  },
+  computed: {
+    ...mapGetters('VoteSummary', ['getVoteSummary']),
+  },
+  methods: {
+    ...mapActions('fetchVoteSummary'),
+  },
+  // async mounted(): {
+  //   if (this.getProjectSummary)
+  // }
   setup() {
     const votingTableData = [
       {
