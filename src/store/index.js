@@ -24,7 +24,9 @@ export default createStore({
   actions: {
     loadProjectVotesSummary({ commit }) {
       axios
-        .get('http://localhost:8000/projects/votes-summary/')
+        .get('http://localhost:8000/projects/votes-summary/', {
+          headers: { 'Access-Control-Allow-Origin': '*' },
+        })
         .then((r) => r.data)
         .then((projectVoteSummary) => {
           commit('SET_PROJECT_VOTES', projectVoteSummary)
