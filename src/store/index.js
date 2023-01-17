@@ -1,9 +1,11 @@
 import { createStore } from 'vuex'
+import axios from 'axios'
 
 export default createStore({
   state: {
     sidebarVisible: '',
     sidebarUnfoldable: false,
+    projectVoteSummary: [],
   },
   mutations: {
     toggleSidebar(state) {
@@ -15,7 +17,19 @@ export default createStore({
     updateSidebarVisible(state, payload) {
       state.sidebarVisible = payload.value
     },
+    SET_PROJECT_VOTES(state, projectVoteSummary) {
+      state.projectVoteSummary = projectVoteSummary
+    },
   },
-  actions: {},
+  actions: {
+    loadProjectVotesSummary({ commit }) {
+      axios
+        .get('http://localhost:8000/projects/votes-summary/')
+        .then((r) => r.data)
+        .then((projectVoteSummary) => {
+          commit('SET_PROJECT_VOTES', projectVoteSummary)
+        })
+    },
+  },
   modules: {},
 })

@@ -12,28 +12,31 @@
             </CTableRow>
           </CTableHead>
           <CTableBody>
-            <CTableRow v-for="item in votingTableData" :key="item.name">
+            <CTableRow
+              v-for="projVote in projectVoteSummary"
+              :key="projVote.ProjectName"
+            >
               <CTableDataCell>
-                <div>{{ item.project.name }}</div>
+                <div>{{ projVote.ProjectName }}</div>
               </CTableDataCell>
               <CTableDataCell class="text-center">
                 <CIcon
                   size="xl"
-                  :name="item.country.flag"
-                  :title="item.country.name"
+                  :name="projVote.IconCode"
+                  :title="projVote.ProjectCountry"
                 />
-                <div>{{ item.country.name }}</div>
+                <div>{{ projVote.ProjectCountry }}</div>
               </CTableDataCell>
               <CTableDataCell>
                 <div class="clearfix">
                   <div class="float-start">
-                    <strong>{{ item.votes.value }}</strong>
+                    <strong>{{ projVote.VoteCount }}</strong>
                   </div>
                 </div>
                 <CProgress
                   thin
-                  :color="item.votes.color"
-                  :value="item.votes.value"
+                  :color="projVote.GraphColour"
+                  :value="projVote.VoteCount"
                 />
               </CTableDataCell>
             </CTableRow>
@@ -45,71 +48,13 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: 'AppVoteSummaryTable',
-  data() {
-    return {
-      isLoading: false,
-    }
+  mounted() {
+    this.$store.dispatch('loadProjectVotesSummary')
   },
-  computed: {
-    ...mapGetters('VoteSummary', ['getVoteSummary']),
-  },
-  methods: {
-    ...mapActions('fetchVoteSummary'),
-  },
-  // async mounted(): {
-  //   if (this.getProjectSummary)
-  // }
-  setup() {
-    const votingTableData = [
-      {
-        project: {
-          name: 'South Jordan Landfill Gas Capture',
-        },
-        country: { name: 'USA', flag: 'cif-us' },
-        votes: {
-          value: 1,
-          color: 'success',
-        },
-      },
-      {
-        project: {
-          name: 'Burn Stoves Project in Kenya',
-        },
-        country: { name: 'Kenya', flag: 'cif-ke' },
-        votes: {
-          value: 0,
-          color: 'danger',
-        },
-      },
-      {
-        project: {
-          name: 'Turkey Duzce Aksu Province',
-        },
-        country: { name: 'Turkey', flag: 'cif-tr' },
-        votes: {
-          value: 0,
-          color: 'warning',
-        },
-      },
-      {
-        project: {
-          name: 'Pacajai REDD+ Forest Protection',
-        },
-        country: { name: 'Brazil', flag: 'cif-br' },
-        votes: {
-          value: 0,
-          color: 'info',
-        },
-      },
-    ]
-
-    return {
-      votingTableData,
-    }
-  },
+  computed: mapState(['projectVoteSummary']),
 }
 </script>

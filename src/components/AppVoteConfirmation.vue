@@ -134,27 +134,14 @@ export default {
   },
   methods: {
     submitForm() {
-      let voucher = this.voucher
-      let projectId = this.projectId
-
       this.v$.$validate()
       // TODO: replace these alerts with actual notifications
       if (!this.v$.$error) {
+        const updateQuery =
+          '?code=' + this.voucher + '&proj_id=' + this.projectId
+
         axios
-          .post(
-            'http://localhost:8000/voucher/vote/',
-            {
-              voucher,
-              projectId,
-            },
-            {
-              headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, PUT',
-              },
-            },
-          )
+          .post('http://localhost:8000/voucher/vote/' + updateQuery)
           .then((response) => console.log(response))
 
         // Provide user notification
