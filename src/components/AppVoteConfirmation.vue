@@ -141,7 +141,7 @@ export default {
           '?code=' + this.voucher + '&proj_id=' + this.projectId
 
         axios
-          .post('http://3.10.179.178:8000//voucher/vote/' + updateQuery)
+          .post('http://3.10.118.24/voucher/vote/' + updateQuery)
           .then((response) => console.log(response))
 
         // Provide user notification
