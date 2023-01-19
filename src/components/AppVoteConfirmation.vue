@@ -141,7 +141,9 @@ export default {
           '?code=' + this.voucher + '&proj_id=' + this.projectId
 
         axios
-          .post('http://3.10.118.24/voucher/vote/' + updateQuery)
+          .post(
+            'https://voting-api.alliedoffsets.com/voucher/vote/' + updateQuery,
+          )
           .then((response) => console.log(response))
 
         // Provide user notification

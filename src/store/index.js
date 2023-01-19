@@ -24,7 +24,7 @@ export default createStore({
   actions: {
     loadProjectVotesSummary({ commit }) {
       axios
-        .get('http://3.10.118.24/projects/votes-summary/')
+        .get('https://voting-api.alliedoffsets.com/projects/votes-summary/')
         .then((r) => r.data)
         .then((projectVoteSummary) => {
           commit('SET_PROJECT_VOTES', projectVoteSummary)
