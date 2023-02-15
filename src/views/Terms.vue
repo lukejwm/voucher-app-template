@@ -4,8 +4,8 @@
       <CCol :md="12" class="brasenose-font">
         <h2>Voucher Terms</h2>
         <p>
-          The voucher code will expire at
-          <strong><em>[PLEASE INSERT EXPIRY DEADLINE]</em></strong
+          The voucher code will expire on
+          <strong><em>Tuesday 28th February 2023</em></strong
           >. Brasenose College reserves the right to end the vouchers at any
           point.
         </p>

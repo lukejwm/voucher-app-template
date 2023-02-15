@@ -56,19 +56,9 @@ const routes = [
     component: () => import('@/views/ThankYou.vue'),
   },
   {
-    path: '/credits',
-    name: 'Credits',
-    component: () => import('@/views/Credits.vue'),
-  },
-  {
     path: '/terms',
     name: 'Terms',
     component: () => import('@/views/Terms.vue'),
-  },
-  {
-    path: '/credits',
-    name: 'Site Credits',
-    component: () => import('@/views/Credits.vue'),
   },
 ]
 
